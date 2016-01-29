@@ -1,6 +1,6 @@
 /*
 	Hexdump printer
-	2015 Michael Fallows
+	2016 Michael Fallows
 	http://michael.fallo.ws
 */
 /*
