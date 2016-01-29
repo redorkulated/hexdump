@@ -14,8 +14,12 @@
 	0x0020:  0001 0000 2910 0000 0000 0000 00         ....)........
 	 -- 45 bytes from pointer 0x51fc040 --
 */
+#ifndef _HEXDUMP_H
+#define _HEXDUMP_H 1
+
 #include <stdio.h>
 #include <unistd.h>
+#include <string.h>
 #define HEXDUMP_ROWLEN 16
 #define HEXDUMP_REPLACECHAR 46
 #define HEXDUMP(d,l) HEXDUMP_TO(d,l,stdout)
@@ -56,3 +60,5 @@ void HEXDUMP_TO(void *d,size_t l,FILE *w){
 	fwrite(b,1,HEXDUMP_ROWLEN+1,(w));
 	fprintf((w),"\n\t -- %lu bytes from pointer %p --\n",(e-(unsigned char *) (d)),(d));
 }
+
+#endif
