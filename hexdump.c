@@ -22,7 +22,7 @@
 #include <string.h>
 #define HEXDUMP_ROWLEN 16
 #define HEXDUMP_REPLACECHAR '.'
-#define HEXDUMP(d,l) HEXDUMP_TO(d,l,stdout)
+#define HEXDUMP(d,l) HEXDUMP_TO(d,l,stderr)
 void HEXDUMP_TO(const void *d,size_t l,FILE *w) __attribute((nonnull));
 
 void HEXDUMP_TO(const void *d,size_t l,FILE *w){
