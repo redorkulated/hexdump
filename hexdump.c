@@ -23,9 +23,9 @@
 #define HEXDUMP_ROWLEN 16
 #define HEXDUMP_REPLACECHAR '.'
 #define HEXDUMP(d,l) HEXDUMP_TO(d,l,stdout)
-void HEXDUMP_TO(void *d,size_t l,FILE *w) __attribute((nonnull));
+void HEXDUMP_TO(const void *d,size_t l,FILE *w) __attribute((nonnull));
 
-void HEXDUMP_TO(void *d,size_t l,FILE *w){
+void HEXDUMP_TO(const void *d,size_t l,FILE *w){
 	/* If file is NULL, bail */
 	if(!w){ return; }
 
